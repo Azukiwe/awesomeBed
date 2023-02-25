@@ -1,11 +1,11 @@
 require('dotenv').config();
 let {createPool}=require('mysql');
 let connection = createPool({
-    host:process.env.HOST,
-    database:process.env.DBName,
-    user:process.env.dbUSER,
-    password:process.env.dbPass,
+    host:process.env.dbHost,
+    database:process.env.dbName,
+    user:process.env.dbUser,
+    password:process.env.dbPwd,
     port:process.env.dbPort,
-    multipeStatements:true
+    multipleStatements:true
 })
 module.exports = connection;
